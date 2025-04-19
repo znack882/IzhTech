@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гаджеты</title>
+    <link rel="stylesheet" href="IzhTech.css"> <!-- Подключение CSS -->
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Цвет фона */
+        }
+
+        header {
+            background-color: #282c34; /* Цвет фона заголовка */
+            color: white; /* Цвет текста заголовка */
+            padding: 10px 0; /* Отступы внутри заголовка */
+            text-align: center; /* Центрирование текста */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Горизонтальное выравнивание пунктов меню */
+            margin: 0 15px; /* Отступы между пунктами меню */
+        }
+
+        nav a {
+            color: white; /* Цвет ссылок в навигации */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        footer {
+            text-align: center; /* Центрирование текста в нижнем колонтитуле */
+            padding: 10px 0; /* Отступы внутри нижнего колонтитула */
+            background-color: #282c34; /* Цвет фона нижнего колонтитула */
+            color: white; /* Цвет текста нижнего колонтитула */
+        }
+
+        .gadgets {
+            text-align: center; /* Центрируем текст для секции */
+            margin: 20px auto; /* Устанавливаем отступы сверху и снизу */
+            max-width: 800px; /* Ограничиваем максимальную ширину для секции */
+        }
+
+        h2 {
+            font-size: 24px; /* Увеличиваем размер шрифта для заголовка */
+            margin-bottom: 20px; /* Отступ снизу для заголовка */
+        }
+
+        .product-container {
+            display: flex; /* Используем flexbox для оформления товаров */
+            flex-wrap: wrap; /* Позволяем перенос товаров на новую строку */
+            justify-content: center; /* Центрируем товары */
+        }
+
+        .product {
+            margin: 15px; /* Отступы между товарами */
+            padding: 10px; /* Отступы внутри каждого товара */
+            border: 1px solid #ccc; /* Граница товара */
+            border-radius: 5px; /* Закругление углов */
+            text-align: center; /* Центрирование текста внутри товара */
+            width: 220px; /* Ширина каждого товара */
+            background-color: #fff; /* Цвет фона товара */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для товара */
+            transition: transform 0.2s; /* Плавность при наведении */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Увеличение товара при наведении */
+        }
+
+        .product img {
+            width: 100%; /* Ширина изображения 100% */
+            height: auto; /* Высота авто, чтобы сохранить пропорции */
+            border-radius: 5px; /* Закругляем углы изображения */
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1><a href="file:///C:/Users/New/Desktop/site/IzhTech.html">IzhTech</a></h1>
+    <nav>
+        <ul>
+            <li><a href="file:///C:/Users/New/Desktop/site/IzhTech.html">Главная</a></li>
+            <li><a href="file:///C:/Users/New/Desktop/site/smartfons.html">Смартфоны</a></li>
+            <li><a href="file:///C:/Users/New/Desktop/site/forBit.html">Для быта</a></li>
+            <li><a href="file:///C:/Users/New/Desktop/site/gadjeti.html">Гаджеты</a></li>
+            <li style="float: right;"><a href="file:///C:/Users/New/Desktop/site/carz.html">Корзина</a></li> <!-- Добавлено правое выравнивание -->
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <section class="gadgets">
+            <h2>Гаджеты</h2>
+            <div class="product-container">
+                <div class="product">
+                    <img src="chasi.webp" alt="Умные часы A1"> <!-- Замените на свой файл -->
+                    <h3>Умные часы A1</h3>
+                    <p>Цена: 15,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="gadjet.webp" alt="Фитнес-трекер B2"> <!-- Замените на свой файл -->
+                    <h3>Фитнес-трекер B2</h3>
+                    <p>Цена: 8,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="naysh.webp" alt="Беспроводные наушники C3"> <!-- Замените на свой файл -->
+                    <h3>Беспроводные наушники C3</h3>
+                    <p>Цена: 12,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="boom1.webp" alt="Портативная колонка D4"> <!-- Замените на свой файл -->
+                    <h3>Портативная колонка D4</h3>
+                    <p>Цена: 10,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="plansh.webp" alt="Планшет E5"> <!-- Замените на свой файл -->
+                    <h3>Планшет E5</h3>
+                    <p>Цена: 25,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="yavaxyi.webp" alt="Электронная книга F6"> <!-- Замените на свой файл -->
+                    <h3>Электронная книга F6</h3>
+                    <p>Цена: 7,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="7257457e08a40bfaa65f69e19b7e39c8.png" alt="VR-гарнитура G7"> <!-- Замените на свой файл -->
+                    <h3>VR-гарнитура G7</h3>
+                    <p>Цена: 30,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="power.webp" alt="Пауэрбанк H8"> <!-- Замените на свой файл -->
+                    <h3>Пауэрбанк H8</h3>
+                    <p>Цена: 3,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+            </div>
+            <!-- Добавьте больше гаджетов здесь -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Электроника для быта</p>
+    </footer>
+</body>
+</html>

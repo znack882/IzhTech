@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для быта</title>
+    <link rel="stylesheet" href="IzhTech.css"> <!-- ссылка на CSS файл -->
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Цвет фона */
+        }
+
+        header {
+            background-color: #282c34; /* Цвет фона заголовка */
+            color: white; /* Цвет текста заголовка */
+            padding: 10px 0; /* Отступы внутри заголовка */
+            text-align: center; /* Центрирование текста */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Горизонтальное выравнивание пунктов меню */
+            margin: 0 15px; /* Отступы между пунктами меню */
+        }
+
+        nav a {
+            color: white; /* Цвет ссылок в навигации */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        footer {
+            text-align: center; /* Центрирование текста в нижнем колонтитуле */
+            padding: 10px 0; /* Отступы внутри нижнего колонтитула */
+            background-color: #282c34; /* Цвет фона нижнего колонтитула */
+            color: white; /* Цвет текста нижнего колонтитула */
+        }
+
+        .home-appliances, .kitchen-appliances, .entertainment-devices {
+            text-align: center; /* Центрируем текст для секций */
+            margin: 20px auto; /* Устанавливаем отступы сверху и снизу */
+            max-width: 800px; /* Ограничиваем максимальную ширину для секции */
+        }
+
+        h2 {
+            font-size: 24px; /* Увеличиваем размер шрифта для заголовка */
+            margin-bottom: 20px; /* Отступ снизу для заголовка */
+        }
+
+        .product-container {
+            display: flex; /* Используем flexbox для оформления товаров */
+            flex-wrap: wrap; /* Позволяем перенос товаров на новую строку */
+            justify-content: center; /* Центрируем товары */
+        }
+
+        .product {
+            margin: 15px; /* Отступы между товарами */
+            padding: 10px; /* Отступы внутри каждого товара */
+            border: 1px solid #ccc; /* Граница товара */
+            border-radius: 5px; /* Закругление углов */
+            text-align: center; /* Центрирование текста внутри товара */
+            width: 220px; /* Ширина каждого товара */
+            background-color: #fff; /* Цвет фона товара */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для товара */
+            transition: transform 0.2s; /* Плавность при наведении */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Увеличение товара при наведении */
+        }
+
+        .product img {
+            width: 100%; /* Ширина изображения 100% */
+            height: auto; /* Высота авто, чтобы сохранить пропорции */
+            border-radius: 5px; /* Закругляем углы изображения */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="file:///C:/Users/New/Desktop/site/IzhTech.html">IzhTech</a></h1>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/New/Desktop/site/IzhTech.html">Главная</a></li>
+                <li><a href="file:///C:/Users/New/Desktop/site/smartfons.html">Смартфоны</a></li>
+                <li><a href="file:///C:/Users/New/Desktop/site/forBit.html">Для быта</a></li>
+                <li><a href="file:///C:/Users/New/Desktop/site/gadjeti.html">Гаджеты</a></li>
+                 <li style="float: right;"><a href="file:///C:/Users/New/Desktop/site/carz.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="home-appliances">
+            <h2>Бытовая техника</h2>
+            <div class="product-container">
+                <div class="product">
+                    <img src="holod.webp" alt="Холодильник A1"> <!-- Замените на свой файл -->
+                    <h3>Холодильник A1</h3>
+                    <p>Цена: 50,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="stiral.webp" alt="Стиральная машина B2"> <!-- Замените на свой файл -->
+                    <h3>Стиральная машина B2</h3>
+                    <p>Цена: 40,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="mikrovol.webp" alt="Микроволновая печь C3"> <!-- Замените на свой файл -->
+                    <h3>Микроволновая печь C3</h3>
+                    <p>Цена: 15,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="piles.webp" alt="Пылесос D4"> <!-- Замените на свой файл -->
+                    <h3>Пылесос D4</h3>
+                    <p>Цена: 20,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="kitchen-appliances">
+            <h2>Кухонные устройства</h2>
+            <div class="product-container">
+                <div class="product">
+                    <img src="blender.webp" alt="Блендер E1"> <!-- Замените на свой файл -->
+                    <h3>Блендер E1</h3>
+                    <p>Цена: 5,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="kofee.webp" alt="Кофеварка F2"> <!-- Замените на свой файл -->
+                    <h3>Кофеварка F2</h3>
+                    <p>Цена: 12,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="toster.webp" alt="Тостер G3"> <!-- Замените на свой файл -->
+                    <h3>Тостер G3</h3>
+                    <p>Цена: 3,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="soko.webp" alt="Соковыжималка H4"> <!-- Замените на свой файл -->
+                    <h3>Соковыжималка H4</h3>
+                    <p>Цена: 8,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="entertainment-devices">
+            <h2>Устройства для развлечений</h2>
+            <div class="product-container">
+                <div class="product">
+                    <img src="telik.webp" alt="Телевизор I1"> <!-- Замените на свой файл -->
+                    <h3>Телевизор I1</h3>
+                    <p>Цена: 70,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="boom.webp" alt="Аудиосистема J2"> <!-- Замените на свой файл -->
+                    <h3>Аудиосистема J2</h3>
+                    <p>Цена: 25,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+                <div class="product">
+                    <img src="foo.webp" alt="Настольные игры K3"> <!-- Замените на свой файл -->
+                    <h3>Приставка K3</h3>
+                    <p>Цена: 1,500 ₽</p>
+                    <button>Купить</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Электроника для быта</p>
+    </footer>
+</body>
+</html>

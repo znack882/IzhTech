@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Цвет фона */
+        }
+
+        header {
+            background-color: #282c34; /* Цвет фона заголовка */
+            color: white; /* Цвет текста заголовка */
+            padding: 10px 0; /* Отступы внутри заголовка */
+            text-align: center; /* Центрирование текста */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Горизонтальное выравнивание пунктов меню */
+            margin: 0 15px; /* Отступы между пунктами меню */
+        }
+
+        nav a {
+            color: white; /* Цвет ссылок в навигации */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        footer {
+            text-align: center; /* Центрирование текста в нижнем колонтитуле */
+            padding: 10px 0; /* Отступы внутри нижнего колонтитула */
+            background-color: #282c34; /* Цвет фона нижнего колонтитула */
+            color: white; /* Цвет текста нижнего колонтитула */
+        }
+
+        .about {
+            text-align: center; /* Центрируем текст для секции "О магазине" */
+            margin: 20px auto; /* Устанавливаем отступы сверху и снизу */
+            max-width: 800px; /* Ограничиваем максимальную ширину для секции */
+        }
+
+        .products {
+            text-align: center; /* Центрируем текст для секции товаров */
+            margin: 10px auto; /* Центрируем по горизонтали */
+            padding: 30px; /* Отступы внутри секции товаров */
+        }
+
+        .products h2 {
+            font-size: 24px; /* Увеличиваем размер шрифта для заголовка */
+            margin-bottom: 20px; /* Отступ снизу для заголовка */
+        }
+
+        .product-container {
+            display: flex; /* Используем flexbox для оформления товаров */
+            flex-wrap: wrap; /* Позволяем перенос товаров на новую строку */
+            justify-content: center; /* Центрируем товары */
+        }
+
+        .product {
+            margin: 15px; /* Отступы между товарами */
+            padding: 10px; /* Отступы внутри каждого товара */
+            border: 1px solid #ccc; /* Граница товара */
+            border-radius: 5px; /* Закругление углов */
+            text-align: center; /* Центрирование текста внутри товара */
+            width: 220px; /* Ширина каждого товара */
+            background-color: #fff; /* Цвет фона товара */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для товара */
+            transition: transform 0.2s; /* Плавность при наведении */
+            position: relative; /* Позиционирование для стрелок */
+        }
+
+        .image-container {
+            position: relative; /* Для стрелок на изображении */
+        }
+
+        .product-image {
+            width: 100%; /* Ширина изображения товара */
+            height: auto; /* Автоматическая высота для поддержания пропорций */
+            border-radius: 5px; /* Закругление углов изображения */
+        }
+
+        .arrow {
+            position: absolute; 
+            top: 50%; /* Центрирование по вертикали */
+            transform: translateY(-50%); /* Правильное центрирование */
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+            border: none; /* Убираем границу */
+            font-size: 20px; /* Размер шрифта */
+            cursor: pointer; /* Указатель курсора при наведении */
+            padding: 10px; /* Отступы внутри кнопки */
+            border-radius: 5px; /* Закругление углов кнопки */
+            z-index: 1; /* Поверх изображений */
+        }
+
+        .arrow.left {
+            left: 10px; /* Положение левой стрелки */
+        }
+
+        .arrow.right {
+            right: 10px; /* Положение правой стрелки */
+        }
+
+        /* Стили для кнопки "Купить" */
+        .buy-button {
+            margin-top: 10px; /* Отступ сверху для кнопки "Купить" */
+            padding: 10px 15px; /* Отступы внутри кнопки */
+            background-color: #28a745; /* Зеленый фон кнопки */
+            color: white; /* Цвет текста кнопки */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругление углов кнопки */
+            cursor: pointer; /* Указатель курсора при наведении */
+            font-size: 16px; /* Размер шрифта кнопки */
+            transition: background-color 0.3s; /* Плавная смена фона при наведении */
+        }
+
+        .buy-button:hover {
+            background-color: #218838; /* Темно-зеленый фон при наведении */
+        }
+
+        .cart-summary {
+            text-align: center; /* Центрируем текст для раздела с суммой корзины */
+            margin-top: 20px; /* Отступ сверху */
+            font-size: 20px; /* Размер шрифта */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="IzhTech.html">IzhTech</a></h1>
+        <nav>
+            <ul>
+                <li><a href="IzhTech.html">Главная</a></li>
+                <li><a href="smartfons.html">Смартфоны</a></li>
+                <li><a href="forBit.html">Для быта</a></li>
+                <li><a href="gadjeti.html">Гаджеты</a></li>
+                <li style="float: right;"><a href="file:///C:/Users/New/Desktop/site/carz.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>О магазине</h2>
+            <p>Добро пожаловать в IzhTech! Мы предлагаем широкий ассортимент электроники и гаджетов от лучших производителей. Наша цель — предоставить вам качественные и современные технологии по доступным ценам.</p>
+            <p>Мы гарантируем высокое качество товаров и отличное обслуживание. Исследуйте наш каталог и найдите именно то, что вам нужно!</p>
+        </section>
+
+        <section class="products">
+            <h2>Популярные товары</h2>
+            <div class="product-container">
+                <div class="product">
+                    <h3>Смартфон A1</h3>
+                    <div class="image-container">
+                        <img src="optimize.webp" class="product-image" alt="Смартфон A1" id="currentImageA1">
+                        <button class="arrow left" onclick="changeImage('A1', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('A1', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: <span class="price">25000</span> ₽</p>
+                    <p>Современный смартфон с высокой производительностью и отличной камерой.</p>
+                    <button class="buy-button" onclick="addToCart(25000)">Купить</button>
+                </div>
+                <div class="product">
+                    <h3>Ноутбук B2</h3>
+                    <div class="image-container">
+                        <img src="loptop1.webp" class="product-image" alt="Ноутбук B2" id="currentImageB2">
+                        <button class="arrow left" onclick="changeImage('B2', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('B2', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: <span class="price">45000</span> ₽</p>
+                    <p>Сильный ноутбук для работы и игр с высоким разрешением.</p>
+                    <button class="buy-button" onclick="addToCart(45000)">Купить</button>
+                </div>
+                <div class="product">
+                    <h3>Фитнес-браслет C3</h3>
+                    <div class="image-container">
+                        <img src="gadjet.webp" class="product-image" alt="Фитнес-браслет C3" id="currentImageC3">
+                        <button class="arrow left" onclick="changeImage('C3', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('C3', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: <span class="price">9000</span> ₽</p>
+                    <p>Фитнес-браслет с мониторингом активности и сердечного ритма.</p>
+                    <button class="buy-button" onclick="addToCart(9000)">Купить</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="cart-summary">
+            <h3>Сумма в корзине: <span id="totalAmount">0</span> ₽</h3>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Магазин электроники</p>
+    </footer>
+
+    <script>
+        const imagesA1 = ["optimize.webp", "optimizex.webp", "optimizez.webp"];
+        const imagesB2 = ["loptop1.webp", "loptop2.webp", "loptop3.webp"];
+        const imagesC3 = ["gadjet.webp", "gadjet1.webp", "gadjet2.webp"];
+
+        let currentIndexA1 = 0;
+        let currentIndexB2 = 0;
+        let currentIndexC3 = 0;
+        let totalSum = 0; // Переменная для хранения общей суммы
+
+        function changeImage(product, direction) {
+            if (product === 'A1') {
+                currentIndexA1 = (currentIndexA1 + direction + imagesA1.length) % imagesA1.length;
+                document.getElementById('currentImageA1').src = imagesA1[currentIndexA1];
+            } else if (product === 'B2') {
+                currentIndexB2 = (currentIndexB2 + direction + imagesB2.length) % imagesB2.length;
+                document.getElementById('currentImageB2').src = imagesB2[currentIndexB2];
+            } else if (product === 'C3') {
+                currentIndexC3 = (currentIndexC3 + direction + imagesC3.length) % imagesC3.length;
+                document.getElementById('currentImageC3').src = imagesC3[currentIndexC3];
+            }
+        }
+
+        function addToCart(price) {
+            totalSum += price; // Увеличиваем общую сумму на цену товара
+            document.getElementById('totalAmount').textContent = totalSum; // Обновляем отображаемую сумму
+        }
+    </script>
+</body>
+</html>

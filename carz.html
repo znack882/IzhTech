@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Цвет фона */
+        }
+
+        header {
+            background-color: #282c34; /* Цвет фона заголовка */
+            color: white; /* Цвет текста заголовка */
+            padding: 10px 0; /* Отступы внутри заголовка */
+            text-align: center; /* Центрирование текста */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Горизонтальное выравнивание пунктов меню */
+            margin: 0 15px; /* Отступы между пунктами меню */
+        }
+
+        nav a {
+            color: white; /* Цвет ссылок в навигации */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        footer {
+            text-align: center; /* Центрирование текста в нижнем колонтитуле */
+            padding: 10px 0; /* Отступы внутри нижнего колонтитула */
+            background-color: #282c34; /* Цвет фона нижнего колонтитула */
+            color: white; /* Цвет текста нижнего колонтитула */
+        }
+
+        .cart {
+            padding: 20px; /* Отступы внутри корзины */
+            max-width: 800px; /* Максимальная ширина корзины */
+            margin: auto; /* Центрируем корзину */
+            background-color: white; /* Цвет фона для корзины */
+            border-radius: 5px; /* Закругление углов */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для корзины */
+        }
+
+        .cart-item {
+            display: flex; /* Используем flexbox для оформления товаров в корзине */
+            align-items: center; /* Выравнивание по центру */
+            margin-bottom: 15px; /* Отступы между товарами */
+            padding: 10px; /* Отступы внутри товара */
+            border: 1px solid #ccc; /* Граница товара в корзине */
+            border-radius: 5px; /* Закругление углов для товара */
+        }
+
+        .cart-item img {
+            width: 50px; /* Ширина изображения товара в корзине */
+            height: auto; /* Автоматическая высота */
+            margin-right: 15px; /* Отступ справа от изображения */
+        }
+
+        .total-sum {
+            font-weight: bold; /* Текст общей суммы жирный */
+            font-size: 18px; /* Размер шрифта для общей суммы */
+            margin-top: 20px; /* Отступ сверху для общей суммы */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+        <nav>
+            <ul>
+                <li><a href="IzhTech.html">Главная</a></li>
+                <li><a href="smartfons.html">Смартфоны</a></li>
+                <li><a href="forBit.html">Для быта</a></li>
+                <li><a href="gadjeti.html">Гаджеты</a></li>
+                <li style="float: right;"><a href="carz.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart" id="cart">
+            <h2>Товары в корзине</h2>
+            <div id="cartItems"></div>
+            <div class="total-sum" id="totalSum"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Магазин электроники</p>
+    </footer>
+
+    <script>
+    // Получаем информацию о товарах из localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let totalSum = cartItems.reduce((sum, item) => sum + item.price, 0); // Предварительный расчет общей суммы
+
+    // Функция для отображения товаров в корзине
+    function displayCartItems() {
+        const cartItemsDiv = document.getElementById('cartItems');
+        if (cartItems.length === 0) {
+            cartItemsDiv.innerHTML = '<p>В корзине пока нет товаров.</p>'; // Сообщение, если корзина пуста
+        } else {
+            cartItems.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('cart-item');
+                itemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>Цена: ${item.price} ₽</p>
+                    </div>
+                `;
+                cartItemsDiv.appendChild(itemDiv);
+            });
+        }
+        document.getElementById('totalSum').innerText = `Общая сумма: ${totalSum} ₽`;
+    }
+
+    // Вызываем функции для отображения товаров
+    displayCartItems();
+</script>
+
+</body>
+</html>

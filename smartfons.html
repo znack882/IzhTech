@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смартфоны</title>
+    <link rel="stylesheet" href="IzhTech.css"> <!-- Подключение CSS -->
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Цвет фона */
+        }
+
+        header {
+            background-color: #282c34; /* Цвет фона заголовка */
+            color: white; /* Цвет текста заголовка */
+            padding: 10px 0; /* Отступы внутри заголовка */
+            text-align: center; /* Центрирование текста */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Горизонтальное выравнивание пунктов меню */
+            margin: 0 15px; /* Отступы между пунктами меню */
+        }
+
+        nav a {
+            color: white; /* Цвет ссылок в навигации */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        footer {
+            text-align: center; /* Центрирование текста в нижнем колонтитуле */
+            padding: 10px 0; /* Отступы внутри нижнего колонтитула */
+            background-color: #282c34; /* Цвет фона нижнего колонтитула */
+            color: white; /* Цвет текста нижнего колонтитула */
+        }
+
+        .smartphones {
+            text-align: center; /* Центрируем текст для секции "Смартфоны" */
+            margin: 20px auto; /* Устанавливаем отступы сверху и снизу */
+            max-width: 800px; /* Ограничиваем максимальную ширину для секции */
+        }
+
+        .smartphones h2 {
+            font-size: 24px; /* Увеличиваем размер шрифта для заголовка */
+            margin-bottom: 20px; /* Отступ снизу для заголовка */
+        }
+
+        .product-container {
+            display: flex; /* Используем flexbox для оформления товаров */
+            flex-wrap: wrap; /* Позволяем перенос товаров на новую строку */
+            justify-content: center; /* Центрируем товары */
+        }
+
+        .product {
+            margin: 15px; /* Отступы между товарами */
+            padding: 10px; /* Отступы внутри каждого товара */
+            border: 1px solid #ccc; /* Граница товара */
+            border-radius: 5px; /* Закругление углов */
+            text-align: center; /* Центрирование текста внутри товара */
+            width: 220px; /* Ширина каждого товара */
+            background-color: #fff; /* Цвет фона товара */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для товара */
+            transition: transform 0.2s; /* Плавность при наведении */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Увеличение товара при наведении */
+        }
+
+        .image-container {
+            position: relative;
+            max-width: 100%; /* Ограничиваем максимальную ширину */
+            overflow: hidden; /* Обрезаем лишние части изображения */
+            border-radius: 5px; /* Закругляем углы изображения */
+        }
+
+        .product-image {
+            width: 100%; /* Ширина изображения 100% */
+            height: auto; /* Высота авто, чтобы сохранить пропорции */
+            display: block; /* Показать изображение */
+        }
+
+        .arrow {
+            cursor: pointer;
+            font-size: 24px; /* Размер стрелок */
+            background: rgba(255, 255, 255, 0.7); /* Фон для стрелок */
+            border: none; /* Убираем границу */
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%; /* Центрируем по вертикали */
+            transform: translateY(-50%); /* Центрируем по вертикали */
+        }
+
+        .left {
+            left: 5px; /* Расположение стрелки налево */
+        }
+        
+        .right {
+            right: 5px; /* Расположение стрелки направо */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="file:///C:/Users/New/Desktop/site/IzhTech.html">IzhTech</a></h1>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/New/Desktop/site/IzhTech.html">Главная</a></li>
+                <li><a href="file:///C:/Users/New/Desktop/site/smartfons.html">Смартфоны</a></li>
+                <li><a href="file:///C:/Users/New/Desktop/site/forBit.html">Для быта</a></li>
+                <li><a href="file:///C:/Users/New/Desktop/site/gadjeti.html">Гаджеты</a></li>
+                 <li style="float: right;"><a href="file:///C:/Users/New/Desktop/site/carz.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="smartphones">
+            <h2>Популярные смартфоны</h2>
+            <div class="product-container">
+                <div class="product">
+                    <h3>Смартфон A1</h3>
+                    <div class="image-container">
+                        <img src="golyb.webp" alt="Смартфон A1 - Изображение 1" class="product-image" id="currentImageA1">
+                        <button class="arrow left" onclick="changeImage('A1', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('A1', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: 25,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+
+                <div class="product">
+                    <h3>Смартфон B2</h3>
+                    <div class="image-container">
+                        <img src="sery.webp" alt="Смартфон B2 - Изображение 1" class="product-image" id="currentImageB2">
+                        <button class="arrow left" onclick="changeImage('B2', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('B2', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: 30,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+
+                <div class="product">
+                    <h3>Смартфон C3</h3>
+                    <div class="image-container">
+                        <img src="note.webp" alt="Смартфон C3 - Изображение 1" class="product-image" id="currentImageC3">
+                        <button class="arrow left" onclick="changeImage('C3', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('C3', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: 35,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+
+                <div class="product">
+                    <h3>Смартфон D4</h3>
+                    <div class="image-container">
+                        <img src="xia.webp" alt="Смартфон D4 - Изображение 1" class="product-image" id="currentImageD4">
+                        <button class="arrow left" onclick="changeImage('D4', -1)">&#9664;</button>
+                        <button class="arrow right" onclick="changeImage('D4', 1)">&#9654;</button>
+                    </div>
+                    <p>Цена: 40,000 ₽</p>
+                    <button>Купить</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Магазин электроники</p>
+    </footer>
+
+    <script>
+        const images = {
+            A1: ['golyb.webp', 'golyb1.webp', 'golyb2.webp'],
+            B2: ['sery.webp', 'sery1.webp', 'sery2.webp'],
+            C3: ['note.webp', 'note1.webp', 'note2.webp'],
+            D4: ['xia.webp', 'xia1.webp', 'xia2.webp'],
+        };
+
+        let currentImageIndex = {
+            A1: 0,
+            B2: 0,
+            C3: 0,
+            D4: 0,
+        };
+
+        function changeImage(product, direction) {
+            const productImages = images[product];
+            currentImageIndex[product] = (currentImageIndex[product] + direction + productImages.length) % productImages.length;
+            
+            const currentImageElement = document.getElementById(`currentImage${product}`);
+            currentImageElement.src = productImages[currentImageIndex[product]];
+        }
+    </script>
+</body>
+</html>
